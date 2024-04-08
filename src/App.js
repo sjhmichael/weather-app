@@ -56,11 +56,6 @@ function App() {
   //handles selected country change
   const handleCountryChange = (selectedOption) => {
     setSelectedCountry(selectedOption.value)
-
-    //changes timezone based on the country selected
-    const countryCode = getCode(selectedOption.value) //get country code from countryname
-    setTimezone(moment.tz.zonesForCountry(countryCode)) //get timezone from country code
-
   }
 
   //handles selected timezone change if manually selected
@@ -104,9 +99,6 @@ function App() {
               {data.main ? <h1>{data.weather[0].main.toUpperCase()}</h1> : null}
             </div>
 
-            {/* <div className="py-10">
-                <img src={Sunny} className="w-[256px] h-[256px]" alt="weather icon"></img>
-            </div> */}
             <WeatherIcon weatherType={data.main ? data.weather[0].main : null} />
 
           </div>
