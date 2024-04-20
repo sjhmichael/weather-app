@@ -56,6 +56,11 @@ function App() {
   //handles selected country change
   const handleCountryChange = (selectedOption) => {
     setSelectedCountry(selectedOption.value)
+
+    //changes timezone based on the country selected
+    const countryCode = getCode(selectedOption.value) //get country code from countryname
+
+
   }
 
   //handles selected timezone change if manually selected

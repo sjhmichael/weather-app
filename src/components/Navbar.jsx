@@ -5,8 +5,6 @@ import { Country, State, City } from 'country-state-city';
 import Select from 'react-select'
 import axios from 'axios';
 
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
-
 const Navbar = ({ onCountryChange, onTimezoneChange }) => {
 
   const [nav, setNav] = useState(false)
